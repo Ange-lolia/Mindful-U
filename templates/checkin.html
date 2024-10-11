@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Check-In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>DAILY CHECK-IN</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/checkin">Daily Check-In</a> |
+            <a href="/resources">Mental Health Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Breathing Exercise</h2>
+        <p>Take a deep breath in... and out. Repeat a few times.</p>
+
+        <form id="mood-form">
+            <label for="mood-select">How do you feel today?</label>
+            <select id="mood-select">
+                <option value="glad">Glad</option>
+                <option value="great">Great</option>
+                <option value="sad">Sad</option>
+                <option value="moody">Moody</option>
+                <option value="heartbroken">Heartbroken</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="response-message"></p>
+    </main>
+
+    <footer>
+        <p>© 2024 Mindful-U</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/checkin.js') }}"></script>
+</body>
+</html>
